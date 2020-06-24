@@ -18,11 +18,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
-
     <div class="main">
 
         <!-- Sing in  Form -->
@@ -31,26 +26,26 @@
                 <div class="signin-content">
                     <div class="signin-image">
                         <figure><img src="login_register/images/signin-image.jpg" alt="sing up image"></figure>
-                        <a href="register.html" class="signup-image-link">Bir hesap oluştur</a>
+                        <a href="Register.aspx" class="signup-image-link">Bir hesap oluştur</a>
                     </div>
 
                     <div class="signin-form">
                         <h2 class="form-title">Giris Yap</h2>
-                        <form method="POST" class="register-form" id="login-form">
+                        <form method="POST" class="register-form" id="giris_formu" runat="server">
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="your_name" id="your_name" placeholder="Email"/>
+                                <asp:TextBox ID="emailTbx" runat="server" MaxLength="50" placeholder="Email" TextMode="Email"></asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="your_pass" id="your_pass" placeholder="Sifre"/>
+                                <asp:TextBox ID="sifreTbx" runat="server" MaxLength="50" placeholder="Sifre" TextMode="Password"></asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
                                 <label for="remember-me" class="label-agree-term"><span><span></span></span>Beni hatırla</label>
                             </div>
                             <div class="form-group form-button">
-                                <input type="submit" name="signin" id="signin" class="form-submit" value="Giris"/>
+                                <asp:Button ID="girisBtn" runat="server" Text="Giris" class="form-submit" />
                             </div>
                         </form>
                     </div>
