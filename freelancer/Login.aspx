@@ -45,8 +45,9 @@
                                 <label for="remember-me" class="label-agree-term"><span><span></span></span>Beni hatırla</label>
                             </div>
                             <div class="form-group form-button">
-                                <asp:Button ID="girisBtn" runat="server" Text="Giris" class="form-submit" />
+                                <asp:Button ID="girisBtn" runat="server" Text="Giris" class="form-submit" OnClick="girisBtn_Click" />
                             </div>
+                            <asp:Label ID="durumLbl" runat="server" Text="" Font-Bold="True" ForeColor="Red" Font-Underline="True"></asp:Label>
                         </form>
                     </div>
                 </div>
