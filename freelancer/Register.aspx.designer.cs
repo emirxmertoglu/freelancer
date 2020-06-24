@@ -69,6 +69,15 @@ namespace freelancer
         protected global::System.Web.UI.WebControls.Button kayitBtn;
 
         /// <summary>
+        /// vazgecBtn denetimi.
+        /// </summary>
+        /// <remarks>
+        /// Otomatik üretilmiş alan.
+        /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button vazgecBtn;
+
+        /// <summary>
         /// durumLbl denetimi.
         /// </summary>
         /// <remarks>

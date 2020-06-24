@@ -44,5 +44,10 @@ namespace freelancer
             
 
         }
+
+        protected void vazgecBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
+        }
     }
 }

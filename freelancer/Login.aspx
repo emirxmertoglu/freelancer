@@ -46,6 +46,7 @@
                             </div>
                             <div class="form-group form-button">
                                 <asp:Button ID="girisBtn" runat="server" Text="Giris" class="form-submit" OnClick="girisBtn_Click" />
+                                <asp:Button ID="vazgecBtn" runat="server" Text="Vazgec" class="form-submit" OnClick="vazgecBtn_Click"/>
                             </div>
                             <asp:Label ID="durumLbl" runat="server" Text="" Font-Bold="True" ForeColor="Red" Font-Underline="True"></asp:Label>
                         </form>
