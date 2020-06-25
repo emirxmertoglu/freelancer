@@ -44,6 +44,26 @@
                                 <asp:TextBox ID="sifreTekrarTbx" runat="server" MaxLength="50" TextMode="Password" placeholder="Sifre Tekrar"></asp:TextBox>
                             </div>
                             <div class="form-group">
+                                <label for="phone"><i class="zmdi zmdi-phone"></i></label>
+                                <asp:TextBox ID="telefonTbx" runat="server" MaxLength="11" TextMode="Phone" placeholder="Telefon"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <label for="bolge"><i class="zmdi zmdi-pin"></i></label>
+                                <asp:TextBox ID="bolgeTbx" runat="server" MaxLength="50" TextMode="SingleLine" placeholder="Bölge"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <label for="tcno"><i class="zmdi zmdi-accounts-list"></i></label>
+                                <asp:TextBox ID="tcNoTbx" runat="server" MaxLength="11" TextMode="SingleLine" placeholder="TC No"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <label for="firma"><i class="zmdi zmdi-case"></i></label>
+                                <asp:TextBox ID="firmaTbx" runat="server" MaxLength="50" TextMode="SingleLine" placeholder="Firma"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <label for="unvan"><i class="zmdi zmdi-mood"></i></label>
+                                <asp:TextBox ID="unvanTbx" runat="server" MaxLength="50" TextMode="SingleLine" placeholder="Ünvan"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
                                 <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
                                 <label for="agree-term" class="label-agree-term"><span><span></span></span><a href="#" class="term-service">Hizmet sartlarındaki</a> tüm beyanları kabul ediyorum</label>
                             </div>

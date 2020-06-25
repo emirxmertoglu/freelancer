@@ -15,6 +15,7 @@ namespace Sinif
         public string Email { get; set; }
         public string Bolge { get; set; }
         public string Sifre { get; set; }
+        public string TcNo { get; set; }
         public enum Cinsiyet
         {
             Erkek,
