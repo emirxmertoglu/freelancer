@@ -96,7 +96,7 @@
                             <h3 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">Sende hayalindeki işi bul</h3>
                             <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">Uzmanlık alanına yada uzmanlaşmak istediğin alana göre sana uygun işi bulabilmeni garantiliyoruz</p>
                             <div class="sldier_btn wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
-                                <a href="#" class="boxed-btn3">İş veren misin? Hemen İlan Yükle</a>
+                                <a href="Advertise.aspx" class="boxed-btn3">İş veren misin? Hemen İlan Yükle</a>
                             </div>
                         </div>
                     </div>
