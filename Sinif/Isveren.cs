@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Sinif
 {
-    class Isveren : Kisi
+    class Isveren : Kisi, IKullanici
     {
-
+        public string GirisBilgileri()
+        {
+            return "Giriş yaparken kullanılacak email: " + this.Email + ", şifre: " + this.Sifre;
+        }
     }
 }
