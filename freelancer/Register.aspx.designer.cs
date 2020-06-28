@@ -33,6 +33,15 @@ namespace freelancer
         protected global::System.Web.UI.WebControls.TextBox adSoyadTbx;
 
         /// <summary>
+        /// cinsiyetTbx denetimi.
+        /// </summary>
+        /// <remarks>
+        /// Otomatik üretilmiş alan.
+        /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cinsiyetTbx;
+
+        /// <summary>
         /// emailTbx denetimi.
         /// </summary>
         /// <remarks>

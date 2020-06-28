@@ -5,22 +5,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <!-- Required meta tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Colorlib Templates">
-    <meta name="author" content="Colorlib">
-    <meta name="keywords" content="Colorlib Templates">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Colorlib Templates" />
+    <meta name="author" content="Colorlib" />
+    <meta name="keywords" content="Colorlib Templates" />
 
     <!-- Title Page-->
-    <title>İlan Ver</title>
+    <title>MSKÜ - Freelancer | İlan Ver!</title>
 
     <!-- Font special for pages-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet" runat="server" />
 
     <!-- Main CSS-->
-    <link href="advertise/css/main.css" rel="stylesheet" media="all">
+    <link href="~/ilan_yayinla/css/main.css" rel="stylesheet" type="text/css" media="all" runat="server" />
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
 </head>
 <body>
 
@@ -58,20 +58,32 @@
                                 <asp:TextBox ID="kontenjanTbx" runat="server" class="input--style-6" TextMode="Number"></asp:TextBox>
                             </div>
                         </div>
+                        <div class="form-row">
+                            <div class="name">Görsel Yükle</div>
+                            <div class="value">
+                                <div class="input-group js-input-file">
+                                    <input class="input-file" type="file" name="file_cv" id="file">
+                                    <label class="label--file" for="file">Dosya seç</label>
+                                    <span class="input-file__info">Hiçbir dosya seçilmedi</span>
+                                </div>
+                                <div class="label--desc">Görselinizin maksimum boyutu 10 MB olmalıdır.</div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <asp:Button ID="yayinlaBtn" runat="server" Text="İlanı Yayınla" class="btn btn--radius-2 btn--blue-2" /> <hr />
+                            <asp:Button ID="vazgecBtn" runat="server" Text="Vazgeç" class="btn btn--radius-2 btn--blue-2" OnClick="vazgecBtn_Click" />
+                        </div>
                     </form>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn--radius-2 btn--blue-2" type="submit">İlanı Yayınla</button>
-                </div>
+                </div>    
             </div>
         </div>
     </div>
 
     <!-- Jquery JS-->
-    <script src="advertise/vendor/jquery/jquery.min.js"></script>
+    <script src="~/ilan_yayinla/vendor/jquery/jquery.min.js"></script>
 
 
     <!-- Main JS-->
-    <script src="advertise/js/global.js"></script>
+    <script src="~/ilan_yayinla/js/global.js"></script>
 </body>
 </html>

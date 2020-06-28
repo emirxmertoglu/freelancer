@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Giriş Yap</title>
+    <title>MSKÜ Freelancer - Kayıt Ol!</title>
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="login_register/fonts/material-icon/css/material-design-iconic-font.min.css">
@@ -30,6 +30,19 @@
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <asp:TextBox ID="adSoyadTbx" runat="server" placeholder="Ad Soyad" MaxLength="100"></asp:TextBox>
+                            </div>
+                            <%--Bu kısımda bir hata var giderilmesi gerek
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <div class="default-select" id="default-select" "="">
+										<select asp-for="Cinsiyet" class="form-control" asp-items="@Html.GetEnumSelectList<Kisi.CinsiyetTipi>()">
+                                            <option selected="selected" value="">Lütfen seçim yapınız</option>
+                                        </select>
+							    </div>
+                            </div>--%>
+                            <div class="form-group">
+                                <label for="cinsiyet"><i class="zmdi zmdi-male-female"></i></label>
+                                <asp:TextBox ID="cinsiyetTbx" runat="server" placeholder="Cinsiyet" TextMode="SingleLine" MaxLength="50"></asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
