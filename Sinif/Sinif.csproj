@@ -43,9 +43,8 @@
   <ItemGroup>
     <Compile Include="IKullanici.cs" />
     <Compile Include="Is.cs" />
-    <Compile Include="Isci.cs" />
-    <Compile Include="Isveren.cs" />
     <Compile Include="Kisi.cs" />
+    <Compile Include="Ozellikler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -121,6 +121,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sinif\Sinif.csproj">
+      <Project>{f87ec250-641e-4267-8911-019ff57ae159}</Project>
+      <Name>Sinif</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Veritabani\Veritabani.csproj">
+      <Project>{b64938ee-6aec-4201-b9f8-7c94f86fb0a2}</Project>
+      <Name>Veritabani</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

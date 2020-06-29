@@ -16,12 +16,14 @@ namespace Sinif
         public string Bolge { get; set; }
         public string Sifre { get; set; }
         public string TcNo { get; set; }
-        public CinsiyetTipi Cinsiyet { get; set; }
-        public enum CinsiyetTipi
-        {
-            Erkek = 1,
-            Kadın = 0
-        }
+
+        public string Cinsiyet { get; set; }
+        //public CinsiyetTipi Cinsiyet { get; set; }
+        //public enum CinsiyetTipi
+        //{
+        //    Erkek = 1,
+        //    Kadın = 0
+        //}
     }
 }
 

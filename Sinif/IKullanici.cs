@@ -8,6 +8,6 @@ namespace Sinif
 {
     interface IKullanici
     {
-        string GirisBilgileri();
+        string GirisBilgileri(string email, string sifre);
     }
 }
