@@ -95,6 +95,7 @@
                             <h5 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">4536+ İlan verildi</h5>
                             <h3 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">Sende hayalindeki işi bul</h3>
                             <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">Uzmanlık alanına yada uzmanlaşmak istediğin alana göre sana uygun işi bulabilmeni garantiliyoruz</p>
+                            <asp:Label ID="adSoyadLbl" runat="server" Text=""></asp:Label>
                             <div class="sldier_btn wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
                                 <a href="Advertise.aspx" class="boxed-btn3">İş veren misin? Hemen İlan Yükle</a>
                             </div>

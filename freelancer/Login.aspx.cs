@@ -6,42 +6,38 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using Sinif;
+using System.Security.Cryptography.X509Certificates;
+using Veritabani;
 
 namespace freelancer
 {
     public partial class Login : System.Web.UI.Page
     {
+        string[] MySession = new string[2];
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void girisBtn_Click(object sender, EventArgs e)
         {
-            try
+            if (emailTbx.Text == "" || sifreTbx.Text == "")
             {
-                SqlConnection db = new SqlConnection("Data Source=DESKTOP-5L5USGA;Initial Catalog=MskuOgrencisineGelir;User ID=emir;Password=emir123");
-                db.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select * from kullanici_bilgileri where kullanici_email=@kullanici_email and kullanici_sifre=@kullanici_sifre", db);
-                da.SelectCommand.Parameters.Add("@kullanici_email", SqlDbType.NVarChar, 50);
-                da.SelectCommand.Parameters.Add("@kullanici_sifre", SqlDbType.NVarChar, 50);
-                da.SelectCommand.Parameters["@kullanici_email"].Value = emailTbx.Text;
-                da.SelectCommand.Parameters["@kullanici_sifre"].Value = sifreTbx.Text;
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                if (dt.Rows.Count != 0)
-                {
-                    db.Close();
-                    Response.Write("<script>alert('Giriş başarılı anasayfaya yönlendiriliyorsunuz'); window.location = 'Default.aspx';</script>");
-                }
-                else
-                {
-                    durumLbl.Text = "Hatalı giris yaptınız!";
-                }
+                durumLbl.Text = "Email veya sifre bilgilerinizi kontrol ediniz";
             }
-            catch (Exception err)
+            else
             {
-                durumLbl.Text = err.ToString();
+                Ozellikler yeniKisi = new Ozellikler();
+                yeniKisi.Email = emailTbx.Text;
+                yeniKisi.Sifre = sifreTbx.Text;
+
+                VeritabaniBaglanti baglanti = new VeritabaniBaglanti();
+                MySession = baglanti.KullaniciGiris(yeniKisi.Email, yeniKisi.Sifre);
+                Session.Add("k_id", MySession[0]);
+                Session.Add("k_adSoyad", MySession[1]);
+                durumLbl.Text = "Merhaba " + Session["k_adSoyad"].ToString();
             }
         }
 

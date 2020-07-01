@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using System.Web;
+using System.Runtime.Remoting.Messaging;
 
 namespace Veritabani
 {
@@ -40,6 +42,38 @@ namespace Veritabani
             {
                 Console.WriteLine(err.ToString());
             }
+        }
+
+        public string[] KullaniciGiris(string kAdi, string kSifre)
+        {
+            string[] donecekDeger = new string[2];
+            try
+            {
+                command = new SqlCommand("select * from kullanici_bilgileri where email=@user and sifre=@pass", connection);
+                command.Parameters.Add("@user", SqlDbType.NVarChar).Value = kAdi;
+                command.Parameters.Add("@pass", SqlDbType.NVarChar).Value = kSifre;
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                // Eger bir kayit varsa
+                if (reader.Read())
+                {
+                    // Okunan degerler session oturum degiskenlerinde saklansın
+
+                    donecekDeger[0] = reader["id"].ToString();
+                    donecekDeger[1] = reader["adSoyad"].ToString();
+                }
+                else
+                {
+                    Console.WriteLine("Boyle bir kullanici yok");
+                }
+                reader.Close();
+                connection.Close();
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.ToString());
+            }
+            return donecekDeger;
         }
     }
 }
